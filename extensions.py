@@ -60,7 +60,7 @@ class ClassBot:
             price = float(price)
         except ValueError:
             raise APIException(f'Сервер вернул не корректный курс валюты - "{price}".')
-        return f'{amount} {base} ({currency[base]}) равно {amount * price} {quote} ({currency[quote]})'
+        return f'{amount} {base} ({currency[base]}) равно {round(amount * price, 4)} {quote} ({currency[quote]})'
 
 
 ######################################################################################################################
